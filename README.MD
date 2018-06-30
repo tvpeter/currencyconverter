@@ -26,3 +26,5 @@ RESOURCES USED
 
 
 ALL THANKS TO ALCWITHGOOGLE3.0 (#7DaysofCodeChallenge) AND https://www.currencyconverterapi.com
+
+  Visit the project demo here => https://tvpeter.github.io/currencyconverter/
