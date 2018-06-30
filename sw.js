@@ -9,13 +9,13 @@ self.addEventListener('install', (event)=> {
     caches.open(cacheVal).then((cache)=> {
       return cache.addAll([
         './',
-        './https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
+        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
         './app.js',
         './src/css/stylev1.css',
         './src/img/404.gif',
         './src/img/sound.gif',
         './index.html',
-        './https://free.currencyconverterapi.com/api/v5/currencies',
+        'https://free.currencyconverterapi.com/api/v5/currencies',
         './idb.js'
       ]);
     })
