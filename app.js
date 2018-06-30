@@ -21,7 +21,7 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies')
            from = document.getElementById('from');
 
 
-          for ( let i of result.results) {
+          for ( let i in result.results) {
 
             //creating the options dropdown 
           let option = document.createElement("option");
