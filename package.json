@@ -1,0 +1,14 @@
+{
+  "name": "currencyconverter",
+  "version": "1.0.0",
+  "description": "\"simple offline webapp for currency conversion using the freecurrencyapi\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tyonum peter",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

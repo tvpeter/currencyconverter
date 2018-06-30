@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>CURRENCY CONVERTER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="src/css/stylev1.css">
+  </head>
+  <body>
+  
+    <div class="container">
+      <div class="inputboard">
+        <p class="text-center text-lead"><strong>CURRENCY CONVERTER WEBAPP</strong></p>
+               <p id="error" class="text-lead text-center"></p>
+      <form class="form-horizontal form-pricing" role="form" id="cform" method="post">
+
+             <div class="form-group">
+               <div class="row">
+              <div class="col-sm-6">
+                 <label>AMOUNT</label>
+                  <input type="number" name="amount" class="form-control" id="amount">
+              </div>
+
+               <div class="col-sm-3">
+                  <label>FROM</label>
+                  <select name="from" id="from" class="form-control" >                 
+                  </select>
+               </div>
+               <div class="col-sm-3">  <label>TO</label>
+                  <select name="to" id="to" class="form-control">                  
+                  </select>
+               </div>
+
+             </div>            
+            </div>
+          <br>
+
+          <div class="col-sm-12">
+                 <p id="show" class="p-3 mb-2 bg-light text-dark text-center"></p>
+              </div><br>
+            <div class="form-group">
+            <div class="col-sm-12">
+          <button type="submit" class="btn btn-secondary btn-lg btn-block">CONVERT </button>
+            </div>
+          </div>      
+        </form>
+          
+        <p class="text-center" style="padding-top:10px;font-size:12px;color:#2c3e50;font-style:italic;">By Tyonum Peter <br>Powered by: Free Currencyconverterapi</p>
+      </div>
+    </div>
+    <script src="idb.js"></script>
+    <script type="text/javascript" src="app.js"></script>  
+</body>
+</html>
