@@ -48,7 +48,7 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies')
              
         //register the service worker
 
-        navigator.serviceWorker.register('/sw.js');
+        navigator.serviceWorker.register('sw.js');
         
         }
 
