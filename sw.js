@@ -4,9 +4,9 @@
 
 
 //cache all the site resources when the sw is installing
-self.addEventListener('install', (event)=> {
+self.addEventListener('install', event=> {
   event.waitUntil(
-    caches.open(cacheVal).then((cache)=> {
+    caches.open(cacheVal).then(cache=> {
       return cache.addAll([
         './',
         'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
@@ -14,6 +14,12 @@ self.addEventListener('install', (event)=> {
         './src/css/stylev1.css',
         './src/img/404.gif',
         './src/img/sound.gif',
+        './src/img/icon48.png',
+        './src/img/icon72.png',
+        './src/img/icon96.png',
+        './src/img/icon144.png',
+        './src/img/icon168.png',
+        './src/img/icon192.png',
         './index.html',
         'https://free.currencyconverterapi.com/api/v5/currencies',
         './idb.js'
@@ -23,14 +29,14 @@ self.addEventListener('install', (event)=> {
 });
 
 
-self.addEventListener('activate', (event)=> {
+self.addEventListener('activate', event=> {
   event.waitUntil(
-    caches.keys().then((storedCaches)=> {
+    caches.keys().then(storedCaches=> {
       return Promise.all(
-        storedCaches.filter((storedCache)=> {
+        storedCaches.filter(storedCache=> {
           return storedCache.startsWith('app') &&
                  storedCache != cacheVal;
-        }).map((storedCache)=> {
+        }).map(storedCache=> {
           return caches.delete(storedCache);
         })
       );
@@ -41,16 +47,16 @@ self.addEventListener('activate', (event)=> {
  
 
 //serve content from cache else fetch from network when there is a fetch request
-self.addEventListener('fetch', (event)=>{
+self.addEventListener('fetch', event=>{
   event.respondWith(
-    caches.match(event.request).then((response)=>{
+    caches.match(event.request).then(response=>{
       if(response) return response;
+
       return fetch(event.request);
     })
 
     );
 });
-
 
 
 
